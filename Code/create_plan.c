@@ -26,5 +26,4 @@ int main()
 	
 }
 
-
-//by Manan :)
+//all the cde does so far is picks up the first two piles of tribbles. I need to replicate the code to pick up the other 2 piles. 
