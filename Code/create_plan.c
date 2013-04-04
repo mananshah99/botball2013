@@ -1,5 +1,5 @@
 // Created on Sat March 30 2013
-#define aligndist 150
+#define sleeptime 2000
 #include "createDrive.c"
 
 void drive_out()
@@ -12,13 +12,13 @@ void drive_out()
 int main()
 {
 	create_special_connect(); // because create_connect didn't want to work
-	drive_out();
+	drive_out(); // look at the function above
 	create_block();
-	msleep(2000); // simulates the create picking up the tribbles
+	msleep(sleeptime); // simulates the create picking up the tribbles
 	create_drive_direct_left(100,2,55); // move to the next pile
 	create_block();
 	create_backward(20,200); // backs up so the claw can fit properly
-	msleep(2000); //waits, simulating the create picking up tribbles
+	msleep(sleeptime); //waits, simulating the create picking up tribbles
 	
 	
 	
