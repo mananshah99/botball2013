@@ -11,15 +11,47 @@ void drive_out()
 
 int main()
 {
-	create_special_connect(); // because create_connect didn't want to work
+	create_connect(); 
 	drive_out(); // look at the function above
-	create_block();
+	create_block(); // regular block function
+	printf("at the first tribble stop\n");
 	msleep(sleeptime); // simulates the create picking up the tribbles
+	printf("finished sleeping\n");
 	create_drive_direct_left(100,2,55); // move to the next pile
 	create_block();
-	create_backward(20,200); // backs up so the claw can fit properly
+	create_backward(25,200); // backs up so the claw can fit properly
+	create_block();
+	printf("at the first tribble stop\n");
 	msleep(sleeptime); //waits, simulating the create picking up tribbles
+	printf("finished sleeping\n");
 	
+	create_drive_direct_right(100,500,45); // turns to face forward
+	create_block();
+	
+	create_forward(350,300); // goes to the next destination
+	create_block();
+	msleep(sleeptime);
+	
+	/*create_drive_direct_right(100,500,15); // turns into the third tribble position
+	create_block();
+	msleep(sleeptime);
+	*/
+	
+	create_backward(50,300);	// backs up (and waits) for the fourth position
+	create_block();
+	msleep(sleeptime);
+	
+	
+	//ADD CODE FOR THE CREATE TO TURN AROUND AND GRAB BOTGUY/THE RED CUBE
+	
+	
+	
+	create_drive_direct_left(500,100,35); // drives to the fourth position and waits (simulating pickup)
+	create_block();	
+	msleep(sleeptime);
+	
+	//create_drive_direct_right(100,500,80);
+	//printf("if I am not broken, then the program has ended");
 	
 	
 	/*
