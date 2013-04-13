@@ -17,6 +17,8 @@ int main()
 	printf("at the first tribble stop\n");
 	msleep(sleeptime); // simulates the create picking up the tribbles
 	printf("finished sleeping\n");
+	//create_backward(200,50);
+	msleep(sleeptime);
 	create_drive_direct_left(100,2,55); // move to the next pile
 	create_block();
 	create_backward(25,200); // backs up so the claw can fit properly
@@ -27,8 +29,29 @@ int main()
 	
 	create_drive_direct_right(100,500,45); // turns to face forward
 	create_block();
+
+	/************************************************************************************************************************************/
+	//stuff I haven't completed yet
 	
-	create_forward(350,300); // goes to the next destination
+	create_forward(125,180);
+	create_block();
+	msleep(sleeptime);
+	create_drive_direct_right(10,500,90);
+	create_block();
+	msleep(sleeptime);
+	create_backward(50,200);
+	create_drive_direct_right(10,500,90);
+	create_block();
+	msleep(sleeptime);
+	create_drive_direct_left(500,100,80);
+	create_block();
+	create_drive_direct_left(500,100,80);
+	create_block();
+	create_forward(125,300);
+	
+	/************************************************************************************************************************************/
+	
+	//create_forward(350,300); // goes to the next destination
 	create_block();
 	msleep(sleeptime);
 	
@@ -39,12 +62,7 @@ int main()
 	
 	create_backward(50,300);	// backs up (and waits) for the fourth position
 	create_block();
-	msleep(sleeptime);
-	
-	
-	//ADD CODE FOR THE CREATE TO TURN AROUND AND GRAB BOTGUY/THE RED CUBE
-	
-	
+	msleep(sleeptime);	
 	
 	create_drive_direct_left(500,100,35); // drives to the fourth position and waits (simulating pickup)
 	create_block();	
