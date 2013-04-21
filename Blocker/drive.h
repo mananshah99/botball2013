@@ -2,26 +2,26 @@
 #ifndef _DRIVE_H_
 #define _DRIVE_H_
 
+
 //primary driving code
-#define MOT_LEFT 0//Polyp edition!
+#define MOT_LEFT 0//Jaybot edition!
 #define MOT_RIGHT 1
 #define PI 3.14159265358979
 #define SPD 1000
 #define SPDl 1000.
-#define SPDr 1000.
+#define SPDr 1000. 
 #define rdistmult (SPDr/SPDl)
 
-#define ks 16//distance from one wheel to another in cm
-#define wheeldiameter 5.3
+#define ks 15.5//distance from one wheel to another in cm
+#define wheeldiameter 5.5 //this is in cm
 
-#define CMtoBEMF (1010/wheeldiameter/PI)
+#define CMtoBEMF (921/wheeldiameter/PI) //921 is how many backemf ticks there are in a full wheel, take the number of units per rotation, divide by circumference
 #define LBUMP digital(14)
 #define RBUMP digital(15) //left/right back bump sensors (used for square_back())
 
 
 #define drive_off() off(MOT_RIGHT) ;off(MOT_LEFT)
 #define drive(mL,mR) mav(MOT_LEFT,mL);mav(MOT_RIGHT,mR)
-#define gmpc(mot) get_motor_position_counter(mot)
 void square_back()
 {
 	int _A = 0,_B = 0;
