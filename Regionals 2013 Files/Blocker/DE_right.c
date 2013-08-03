@@ -109,5 +109,3 @@ int main()
 	ao();
 	return 0;
 }
-
-//if this is messed up, email me at manan.shah.777@gmail.com
